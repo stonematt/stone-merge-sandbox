@@ -18,7 +18,9 @@ one value in several units at once, see
 conversion errors out or returns a number that looks wrong, see
 [`troubleshooting.md`](troubleshooting.md). For points, picas, and the
 thousandth-of-an-inch units that stand in for them, see
-[`typography-units.md`](typography-units.md).
+[`typography-units.md`](typography-units.md). For what the command does not
+do at all — the categories, formats, and flags that are absent — see
+[`limitations.md`](limitations.md).
 
 `unitconv` takes three positional arguments: a numeric value, the unit to
 convert from, and the unit to convert to. It prints the converted value to
