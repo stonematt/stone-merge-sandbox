@@ -52,6 +52,10 @@ def test_convert_length_thou_to_miles():
     assert convert_length(1, "th", "mi") == pytest.approx(1.5782828282828283e-08)
 
 
+def test_convert_length_nautical_mile_to_miles():
+    assert convert_length(1, "nmi", "mi") == pytest.approx(1.1507794480235425)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
