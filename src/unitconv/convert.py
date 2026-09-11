@@ -42,6 +42,8 @@ FACTORS_LENGTH = {
     "vst": 1066.8,
     # Furlong -- 10 chains ("ch"), an eighth of a mile.
     "fur": 201.168,
+    # Palm -- exactly 3 in.
+    "plm": 0.0762,
 }
 
 # Mass base unit: gram.
