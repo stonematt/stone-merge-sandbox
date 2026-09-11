@@ -14,7 +14,9 @@ record in `CHANGELOG.md` along the way, see
 the length table — the parsec, the gigametre, and what is deliberately
 absent — see [`astronomical-units.md`](astronomical-units.md). For showing
 one value in several units at once, see
-[`comparison-tables.md`](comparison-tables.md).
+[`comparison-tables.md`](comparison-tables.md). For what to check when a
+conversion errors out or returns a number that looks wrong, see
+[`troubleshooting.md`](troubleshooting.md).
 
 `unitconv` takes three positional arguments: a numeric value, the unit to
 convert from, and the unit to convert to. It prints the converted value to
