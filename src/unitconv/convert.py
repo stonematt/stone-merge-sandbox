@@ -48,6 +48,8 @@ FACTORS_LENGTH = {
     # Hand -- exactly 4 in.
     "hh": 0.1016,
     "ang": 1e-10,
+    # Cable -- a tenth of a nautical mile ("nmi").
+    "cbl": 185.2,
 }
 
 # Mass base unit: gram.
