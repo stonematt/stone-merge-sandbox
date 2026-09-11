@@ -54,6 +54,8 @@ FACTORS_LENGTH = {
     # Hank (textile) -- 840 yd of yarn.
     "hnk": 768.1,
     "kpc": 3.0856775814913673e19,
+    # Nonpareil -- a 6-point typographic measure.
+    "non": 0.00164,
 }
 
 # Mass base unit: gram.
