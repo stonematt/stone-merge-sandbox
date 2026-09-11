@@ -58,6 +58,8 @@ FACTORS_LENGTH = {
     "non": 0.00164,
     "jo": 3.03,
     "zm": 1e-21,
+    # Roman mile (mille passus) -- 1000 double paces.
+    "mpas": 1481.5,
 }
 
 # Mass base unit: gram.
