@@ -58,6 +58,8 @@ FACTORS_LENGTH = {
     "non": 0.00164,
     "jo": 3.03,
     "zm": 1e-21,
+    # Gaz (South Asian yard) -- same length as "yd".
+    "gaz": 0.9144,
 }
 
 # Mass base unit: gram.
