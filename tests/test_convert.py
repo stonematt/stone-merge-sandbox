@@ -73,6 +73,15 @@ def test_convert_length_decametre_to_metres_and_back():
     assert convert_length(10.0, "m", "dam") == pytest.approx(1.0)
 
 
+def test_convert_length_point_to_millimetres_and_back():
+    assert convert_length(1, "pt", "mm") == pytest.approx(0.35278)
+    assert convert_length(0.35278, "mm", "pt") == pytest.approx(1.0)
+
+
+def test_convert_length_point_to_inches():
+    assert convert_length(1, "pt", "in") == pytest.approx(0.013888976377952757)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

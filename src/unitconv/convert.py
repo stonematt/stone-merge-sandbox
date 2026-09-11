@@ -34,6 +34,7 @@ FACTORS_LENGTH = {
     "au": 149597870700.0,
     "Tm": 1000000000000.0,
     "dam": 10.0,
+    "pt": 0.00035278,
 }
 
 # Mass base unit: gram.
@@ -65,6 +66,7 @@ FACTORS_MASS = {
 
 # Reserved for the rounding option; nothing reads this yet.
 DEFAULT_DECIMALS_dam = 3
+DEFAULT_DECIMALS_pt = 3
 
 
 def convert_length(value: float, from_unit: str, to_unit: str) -> float:
