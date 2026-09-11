@@ -12,6 +12,7 @@ FACTORS_LENGTH = {
     "yd": 0.9144,
     "mi": 1609.344,
     "rop": 6.096,
+    "nm": 1e-09,
 }
 
 # Mass base unit: gram.
