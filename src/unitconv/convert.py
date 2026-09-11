@@ -33,6 +33,7 @@ FACTORS_LENGTH = {
     "bc": 0.00846667,
     "au": 149597870700.0,
     "Tm": 1000000000000.0,
+    "hm": 100.0,
 }
 
 # Mass base unit: gram.
@@ -61,6 +62,9 @@ FACTORS_MASS = {
     "tla": 11.6638038,
     "mrk": 248.8278144,
 }
+
+# Reserved for the forthcoming rounding option; nothing reads it yet.
+DEFAULT_DECIMALS_hm = 3
 
 
 def convert_length(value: float, from_unit: str, to_unit: str) -> float:

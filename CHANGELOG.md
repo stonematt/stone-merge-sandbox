@@ -11,3 +11,4 @@ All notable changes to this project will be documented in this file.
 - Add `bc` to the supported length units.
 - Add `au` to the supported length units.
 - Add `Tm` to the supported length units.
+- Add `hm` to the supported length units.

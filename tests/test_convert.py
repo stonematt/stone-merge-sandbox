@@ -68,6 +68,10 @@ def test_convert_length_terametre_to_feet():
     assert convert_length(1, "Tm", "ft") == pytest.approx(3280839895013.123)
 
 
+def test_convert_length_hectometre_to_feet():
+    assert convert_length(1, "hm", "ft") == pytest.approx(328.0839895013123)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
