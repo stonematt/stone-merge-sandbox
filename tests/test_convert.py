@@ -32,6 +32,10 @@ def test_convert_length_ri_to_miles():
     assert convert_length(1, "ri", "mi") == pytest.approx(2.4402924421379146)
 
 
+def test_convert_length_gigametre_to_miles():
+    assert convert_length(1, "Gm", "mi") == pytest.approx(621371.1922373339)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
