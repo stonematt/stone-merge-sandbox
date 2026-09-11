@@ -32,6 +32,11 @@ def test_convert_length_ri_to_miles():
     assert convert_length(1, "ri", "mi") == pytest.approx(2.4402924421379146)
 
 
+def test_convert_length_shaku_to_m_and_back():
+    assert convert_length(1, "shk", "m") == pytest.approx(0.3030303)
+    assert convert_length(0.3030303, "m", "shk") == pytest.approx(1.0)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

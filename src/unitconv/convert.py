@@ -17,6 +17,7 @@ FACTORS_LENGTH = {
     "xu": 1.0021e-13,
     "ri": 3927.27,
     "mil": 2.54e-05,
+    "shk": 0.3030303,
 }
 
 # Mass base unit: gram.
