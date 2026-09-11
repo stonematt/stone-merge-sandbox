@@ -124,6 +124,11 @@ def test_convert_mass_candareen_to_kg_and_back():
     assert convert_mass(0.00037799364, "kg", "cdr") == pytest.approx(1.0)
 
 
+def test_convert_mass_gamma_to_kg_and_back():
+    assert convert_mass(1, "gam", "kg") == pytest.approx(1e-09)
+    assert convert_mass(1e-09, "kg", "gam") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
