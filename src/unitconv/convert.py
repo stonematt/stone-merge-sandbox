@@ -44,6 +44,7 @@ FACTORS_LENGTH = {
     "fur": 201.168,
     # Palm -- exactly 3 in.
     "plm": 0.0762,
+    "cbt": 0.4572,
 }
 
 # Mass base unit: gram.
