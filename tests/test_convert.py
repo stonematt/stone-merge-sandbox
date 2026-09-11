@@ -42,6 +42,11 @@ def test_convert_mass_stone_to_kg_and_back():
     assert convert_mass(6.35029318, "kg", "st") == pytest.approx(1.0)
 
 
+def test_convert_mass_troy_ounce_to_kg_and_back():
+    assert convert_mass(1, "ozt", "kg") == pytest.approx(0.0311034768)
+    assert convert_mass(0.0311034768, "kg", "ozt") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
