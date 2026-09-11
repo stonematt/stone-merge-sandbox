@@ -1,5 +1,8 @@
 # Usage
 
+If you do not have the `unitconv` command yet, see
+[`installation.md`](installation.md).
+
 `unitconv` takes three positional arguments: a numeric value, the unit to
 convert from, and the unit to convert to. It prints the converted value to
 standard output.
