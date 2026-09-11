@@ -154,6 +154,11 @@ def test_convert_mass_tola_to_kg_and_back():
     assert convert_mass(0.0116638038, "kg", "tla") == pytest.approx(1.0)
 
 
+def test_convert_mass_quintal_to_kg_and_back():
+    assert convert_mass(1, "q", "kg") == pytest.approx(100.0)
+    assert convert_mass(100.0, "kg", "q") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
