@@ -53,6 +53,7 @@ FACTORS_LENGTH = {
     "fot": 0.2969,
     # Hank (textile) -- 840 yd of yarn.
     "hnk": 768.1,
+    "kpc": 3.0856775814913673e19,
 }
 
 # Mass base unit: gram.
