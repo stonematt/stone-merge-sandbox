@@ -40,6 +40,8 @@ FACTORS_LENGTH = {
     "szh": 2.1336,
     # Russian verst -- 500 sazhen.
     "vst": 1066.8,
+    # Furlong -- 10 chains ("ch"), an eighth of a mile.
+    "fur": 201.168,
 }
 
 # Mass base unit: gram.
