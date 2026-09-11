@@ -31,6 +31,7 @@ FACTORS_LENGTH = {
     "nmi": 1852.0,
     "Mm": 1000000.0,
     "bc": 0.00846667,
+    "au": 149597870700.0,
 }
 
 # Mass base unit: gram.

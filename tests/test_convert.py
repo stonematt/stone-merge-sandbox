@@ -60,6 +60,10 @@ def test_convert_length_barleycorn_to_feet():
     assert convert_length(1, "bc", "ft") == pytest.approx(0.02777778871391076)
 
 
+def test_convert_length_astronomical_unit_to_feet():
+    assert convert_length(1, "au", "ft") == pytest.approx(490806662401.57477)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
