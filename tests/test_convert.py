@@ -64,6 +64,10 @@ def test_convert_length_astronomical_unit_to_feet():
     assert convert_length(1, "au", "ft") == pytest.approx(490806662401.57477)
 
 
+def test_convert_length_picometre_to_feet():
+    assert convert_length(1, "pm", "ft") == pytest.approx(3.280839895013123e-12)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

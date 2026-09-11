@@ -32,6 +32,7 @@ FACTORS_LENGTH = {
     "Mm": 1000000.0,
     "bc": 0.00846667,
     "au": 149597870700.0,
+    "pm": 1e-12,
 }
 
 # Mass base unit: gram.
