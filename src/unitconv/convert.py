@@ -85,6 +85,7 @@ FACTORS_MASS = {
     "jpt": 0.002,
     "tla": 11.6638038,
     "mrk": 248.8278144,
+    "pg": 1e-12,
 }
 
 # Reserved for the rounding option; nothing reads this yet.
