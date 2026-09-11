@@ -56,6 +56,7 @@ FACTORS_LENGTH = {
     "kpc": 3.0856775814913673e19,
     # Nonpareil -- a 6-point typographic measure.
     "non": 0.00164,
+    "jo": 3.03,
 }
 
 # Mass base unit: gram.
