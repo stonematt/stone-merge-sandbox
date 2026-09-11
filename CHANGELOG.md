@@ -10,3 +10,4 @@ All notable changes to this project will be documented in this file.
 - Smoke test note: automerge-c (2026-09-11T07:34).
 - Add `bc` to the supported length units.
 - Add `au` to the supported length units.
+- Add `dm` to the supported length units.
