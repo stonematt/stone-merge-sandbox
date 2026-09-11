@@ -58,6 +58,8 @@ FACTORS_LENGTH = {
     "non": 0.00164,
     "jo": 3.03,
     "zm": 1e-21,
+    # Shackle -- 15 fathoms ("ftm") of anchor chain.
+    "shac": 27.432,
 }
 
 # Mass base unit: gram.
