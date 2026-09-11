@@ -7,8 +7,10 @@ install, one conversion, the supported units — see
 `unitconv` as a Python library instead, see
 [`api-reference.md`](api-reference.md); for calling the command from a shell
 script — exit codes, parsing the output line, batch loops — see
-[`scripting.md`](scripting.md). For how changes get from a branch to a
-tagged release, see [`release-process.md`](release-process.md); for what to
+[`scripting.md`](scripting.md). For what the failure messages mean and which
+surprising results are not failures at all, see
+[`error-messages.md`](error-messages.md). For how changes get from a branch
+to a tagged release, see [`release-process.md`](release-process.md); for what to
 record in `CHANGELOG.md` along the way, see
 [`changelog-conventions.md`](changelog-conventions.md).
 
@@ -39,7 +41,9 @@ they are not simple linear scalings of a shared base unit — see
 work and what they do not check.
 
 Mixing categories, such as converting a length to a mass, is not supported
-and will print an error message with a non-zero exit code.
+and will print an error message with a non-zero exit code — see
+[`error-messages.md`](error-messages.md) for that message and the other ways
+a conversion can fail.
 
 ## Common conversions
 
