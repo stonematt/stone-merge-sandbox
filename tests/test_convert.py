@@ -44,6 +44,10 @@ def test_convert_length_pace_to_miles():
     assert convert_length(1, "pce", "mi") == pytest.approx(0.0004734848484848485)
 
 
+def test_convert_length_span_to_miles():
+    assert convert_length(1, "spn", "mi") == pytest.approx(0.00014204545454545454)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

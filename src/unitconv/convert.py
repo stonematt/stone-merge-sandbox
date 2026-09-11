@@ -23,6 +23,7 @@ FACTORS_LENGTH = {
     "prc": 5.0292,
     "ftm": 1.8288,
     "pce": 0.762,
+    "spn": 0.2286,
 }
 
 # Mass base unit: gram.
