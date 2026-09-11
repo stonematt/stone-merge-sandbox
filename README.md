@@ -1,6 +1,6 @@
 # unitconv
 
-A small command-line unit converter for length, mass, and temperature.
+A small command-line unit converter for length, mass, and temperature values.
 
 ## Install
 
