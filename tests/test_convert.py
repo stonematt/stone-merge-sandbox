@@ -48,6 +48,10 @@ def test_convert_length_link_to_miles():
     assert convert_length(1, "lnk", "mi") == pytest.approx(0.000125)
 
 
+def test_convert_length_digit_to_inches():
+    assert convert_length(1, "dgt", "in") == pytest.approx(0.75)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

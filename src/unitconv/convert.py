@@ -25,6 +25,7 @@ FACTORS_LENGTH = {
     "pce": 0.762,
     "mu": 1e-6,
     "lnk": 0.201168,
+    "dgt": 0.01905,
 }
 
 # Mass base unit: gram.
