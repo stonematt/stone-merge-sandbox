@@ -16,7 +16,9 @@ absent — see [`astronomical-units.md`](astronomical-units.md). For showing
 one value in several units at once, see
 [`comparison-tables.md`](comparison-tables.md). For what to check when a
 conversion errors out or returns a number that looks wrong, see
-[`troubleshooting.md`](troubleshooting.md).
+[`troubleshooting.md`](troubleshooting.md). For points, picas, and the
+thousandth-of-an-inch units that stand in for them, see
+[`typography-units.md`](typography-units.md).
 
 `unitconv` takes three positional arguments: a numeric value, the unit to
 convert from, and the unit to convert to. It prints the converted value to
