@@ -37,6 +37,15 @@ def test_convert_mass_oz_to_g():
     assert convert_mass(1, "oz", "g") == pytest.approx(28.349523125)
 
 
+def test_convert_mass_stone_to_kg_and_back():
+    assert convert_mass(1, "st", "kg") == pytest.approx(6.35029318)
+    assert convert_mass(6.35029318, "kg", "st") == pytest.approx(1.0)
+
+
+def test_convert_mass_stone_to_lb():
+    assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
+
+
 def test_celsius_to_fahrenheit():
     assert celsius_to_fahrenheit(0) == pytest.approx(32.0)
     assert celsius_to_fahrenheit(100) == pytest.approx(212.0)
