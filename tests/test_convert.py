@@ -106,6 +106,11 @@ def test_convert_mass_assay_ton_to_kg_and_back():
     assert convert_mass(0.02916666, "kg", "at") == pytest.approx(1.0)
 
 
+def test_convert_mass_tael_to_kg_and_back():
+    assert convert_mass(1, "tl", "kg") == pytest.approx(0.037799364)
+    assert convert_mass(0.037799364, "kg", "tl") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
