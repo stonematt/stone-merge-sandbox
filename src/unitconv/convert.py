@@ -3,6 +3,7 @@
 # All factors express "how many base units per 1 of this unit".
 # Length base unit: meter.
 FACTORS_LENGTH = {
+    "fmi": 1e-15,
     "mm": 0.001,
     "cm": 0.01,
     "m": 1.0,
