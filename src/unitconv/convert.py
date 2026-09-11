@@ -1,0 +1,64 @@
+"""Conversion routines for length, mass, and temperature."""
+
+# All factors express "how many base units per 1 of this unit".
+# Length base unit: meter.
+FACTORS_LENGTH = {
+    "mm": 0.001,
+    "cm": 0.01,
+    "m": 1.0,
+    "km": 1000.0,
+    "in": 0.0254,
+    "ft": 0.3048,
+    "yd": 0.9144,
+    "mi": 1609.344,
+}
+
+# Mass base unit: gram.
+FACTORS_MASS = {
+    "mg": 0.001,
+    "g": 1.0,
+    "kg": 1000.0,
+    "oz": 28.349523125,
+    "lb": 453.59237,
+}
+
+
+def convert_length(value: float, from_unit: str, to_unit: str) -> float:
+    """Convert a length value between supported units."""
+    from_factor = _lookup(FACTORS_LENGTH, from_unit)
+    to_factor = _lookup(FACTORS_LENGTH, to_unit)
+    return value * from_factor / to_factor
+
+
+def convert_mass(value: float, from_unit: str, to_unit: str) -> float:
+    """Convert a mass value between supported units."""
+    from_factor = _lookup(FACTORS_MASS, from_unit)
+    to_factor = _lookup(FACTORS_MASS, to_unit)
+    return value * from_factor / to_factor
+
+
+def celsius_to_fahrenheit(value: float) -> float:
+    """Convert Celsius to Fahrenheit."""
+    return value * 9 / 5 + 32
+
+
+def fahrenheit_to_celsius(value: float) -> float:
+    """Convert Fahrenheit to Celsius."""
+    return (value - 32) * 5 / 9
+
+
+def celsius_to_kelvin(value: float) -> float:
+    """Convert Celsius to Kelvin."""
+    return value + 273.15
+
+
+def kelvin_to_celsius(value: float) -> float:
+    """Convert Kelvin to Celsius."""
+    return value - 273.15
+
+
+def _lookup(table: dict, unit: str) -> float:
+    try:
+        return table[unit]
+    except KeyError as exc:
+        raise ValueError(f"unsupported unit: {unit!r}") from exc

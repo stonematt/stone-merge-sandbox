@@ -1,0 +1,28 @@
+name: test
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+  push:
+    branches: [dev, main]
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -e . pytest
+
+      - name: Run tests
+        run: pytest -q
+
+      - name: forced failure
+        if: contains(github.event.pull_request.labels.*.name, 'ci: fail')
+        run: exit 1

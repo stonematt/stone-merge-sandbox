@@ -1,0 +1,23 @@
+name: flaky
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+  push:
+    branches: [dev, main]
+
+jobs:
+  flaky:
+    name: flaky
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run
+        run: |
+          echo "run attempt: ${{ github.run_attempt }}"
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            exit 0
+          fi
+          if [ "${{ contains(github.event.pull_request.labels.*.name, 'ci: flaky') }}" = "true" ] && [ "${{ github.run_attempt }}" = "1" ]; then
+            exit 1
+          fi
+          exit 0
