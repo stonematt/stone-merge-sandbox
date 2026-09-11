@@ -132,6 +132,12 @@ def test_convert_length_nonpareil_to_miles():
         assert miles == pytest.approx(magnitude * 0.00164 / 1609.344)
 
 
+def test_convert_length_zeptometre_to_miles():
+    for magnitude in (0.001, 1.0, 1000.0):
+        miles = convert_length(magnitude, "zm", "mi")
+        assert miles == pytest.approx(magnitude * 1e-21 / 1609.344)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
