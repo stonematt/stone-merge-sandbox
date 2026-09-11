@@ -68,6 +68,11 @@ def test_convert_length_terametre_to_feet():
     assert convert_length(1, "Tm", "ft") == pytest.approx(3280839895013.123)
 
 
+def test_convert_length_decametre_to_metres_and_back():
+    assert convert_length(1, "dam", "m") == pytest.approx(10.0)
+    assert convert_length(10.0, "m", "dam") == pytest.approx(1.0)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
