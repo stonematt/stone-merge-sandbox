@@ -4,7 +4,9 @@ If you do not have the `unitconv` command yet, see
 [`installation.md`](installation.md). For the short version of this page —
 install, one conversion, the supported units — see
 [`quickstart.md`](quickstart.md). For how changes get from a branch to a
-tagged release, see [`release-process.md`](release-process.md).
+tagged release, see [`release-process.md`](release-process.md); for what to
+record in `CHANGELOG.md` along the way, see
+[`changelog-conventions.md`](changelog-conventions.md).
 
 `unitconv` takes three positional arguments: a numeric value, the unit to
 convert from, and the unit to convert to. It prints the converted value to
