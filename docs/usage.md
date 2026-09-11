@@ -16,3 +16,53 @@ they are not simple linear scalings of a shared base unit.
 
 Mixing categories, such as converting a length to a mass, is not supported
 and will print an error message with a non-zero exit code.
+
+## Common conversions
+
+Miles to kilometres:
+
+```bash
+unitconv 5 mi km
+```
+
+```
+5.0 mi = 8.04672 km
+```
+
+Kilograms to pounds:
+
+```bash
+unitconv 70 kg lb
+```
+
+```
+70.0 kg = 154.3235835294143 lb
+```
+
+Celsius to Fahrenheit:
+
+```bash
+unitconv 20 c f
+```
+
+```
+20.0 c = 68.0 f
+```
+
+Note that the echoed input value is reformatted: the argument is parsed as a
+float, so `5` is printed back as `5.0`.
+
+### How rounding is handled
+
+`unitconv` does not round. Results are printed with Python's default float
+formatting, which means you get the full precision of the underlying
+double — hence `154.3235835294143` rather than `154.32` for the mass example
+above. Some conversions look tidy anyway, either because the factor is exact
+in decimal (`mi` to `km` is defined as 1609.344) or because the arithmetic
+happens to land on a round number (20 °C to 68 °F), but that is a property of
+those particular inputs, not a formatting rule. Conversions that are not
+exactly representable in binary floating point may also show the usual
+artifacts in the trailing digits. If you need a fixed number of decimal
+places, round at the point of use — for example by piping the output through
+`printf`, or by calling `convert_length`, `convert_mass`, and the temperature
+helpers directly and rounding the returned float yourself.
