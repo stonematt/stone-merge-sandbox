@@ -11,6 +11,8 @@ These are the entries worth knowing at that end of the table:
 - `pc` — the parsec, 3.0856775814913673e16 m, sized by the geometry of a
   parallax measurement rather than by convention. Where it came from is in
   [`history-of-units.md`](history-of-units.md).
+- `Tm` — the terametre, 1e12 m, a thousand gigametres. Sits between
+  interplanetary and interstellar scales.
 - `Gm` — the gigametre, 1e9 m. Useful for distances inside a solar system,
   where kilometres run to ten or more digits.
 - `km` and `mi` — still available, and still the units most results end up
