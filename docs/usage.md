@@ -18,7 +18,10 @@ unitconv <value> <from_unit> <to_unit>
 
 Length and mass conversions use a simple linear factor table, so any pair of
 units within the same category can be combined directly, for example
-`unitconv 3 ft yd` or `unitconv 2 lb oz`. The two tables cover a mix of
+`unitconv 3 ft yd` or `unitconv 2 lb oz`. Each table is anchored to a single
+base unit — the meter for length, the gram for mass — which is what lets any
+pair combine without a factor being stored for that specific pair; see
+[`why-a-base-unit.md`](why-a-base-unit.md). The two tables cover a mix of
 everyday, historical, and scientific units — for where the less obvious ones
 came from, and why some of their factors look so specific, see
 [`history-of-units.md`](history-of-units.md). Temperature conversions between
