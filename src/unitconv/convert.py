@@ -50,6 +50,8 @@ FACTORS_LENGTH = {
     "ang": 1e-10,
     # Cable -- a tenth of a nautical mile ("nmi").
     "cbl": 185.2,
+    # Finger -- exactly 4.5 in, a tenth of an ell ("ell").
+    "fgr": 0.1143,
 }
 
 # Mass base unit: gram.
