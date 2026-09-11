@@ -47,6 +47,7 @@ FACTORS_LENGTH = {
     "cbt": 0.4572,
     # Hand -- exactly 4 in.
     "hh": 0.1016,
+    "ang": 1e-10,
 }
 
 # Mass base unit: gram.
