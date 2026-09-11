@@ -241,6 +241,10 @@ def test_convert_mass_mark_to_kg_and_back():
     assert convert_mass(0.2488278144, "kg", "mrk") == pytest.approx(1.0)
 
 
+def test_convert_mass_quarter_to_g():
+    assert convert_mass(1, "qtr", "g") == pytest.approx(12700.58636)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
