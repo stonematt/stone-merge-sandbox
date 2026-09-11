@@ -16,6 +16,10 @@ standard output.
 unitconv <value> <from_unit> <to_unit>
 ```
 
+No completion scripts ship with the command, but the unit abbreviations take
+well to tab completion — [`shell-completion.md`](shell-completion.md) has a
+bash and a zsh function you can add yourself.
+
 Length and mass conversions use a simple linear factor table, so any pair of
 units within the same category can be combined directly, for example
 `unitconv 3 ft yd` or `unitconv 2 lb oz`. Each table is anchored to a single
