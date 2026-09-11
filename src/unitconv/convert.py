@@ -35,6 +35,7 @@ FACTORS_LENGTH = {
 # Mass base unit: gram.
 FACTORS_MASS = {
     "mg": 0.001,
+    "cg": 0.01,
     "dg": 0.1,
     "g": 1.0,
     "kg": 1000.0,

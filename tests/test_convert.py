@@ -144,6 +144,11 @@ def test_convert_mass_jewellers_point_to_kg_and_back():
     assert convert_mass(2e-06, "kg", "jpt") == pytest.approx(1.0)
 
 
+def test_convert_mass_centigram_to_kg_and_back():
+    assert convert_mass(1, "cg", "kg") == pytest.approx(1e-05)
+    assert convert_mass(1e-05, "kg", "cg") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
