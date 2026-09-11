@@ -22,7 +22,7 @@ unitconv 5 lb kg
 ```
 
 Supported length units: `mm`, `cm`, `m`, `km`, `in`, `ft`, `yd`, `mi`.
-Supported mass units: `mg`, `g`, `kg`, `oz`, `lb`.
+Supported mass units: `mg`, `g`, `kg`, `oz`, `lb`, `st`.
 Supported temperature units: `c`, `f`, `k`.
 
 See [`docs/usage.md`](docs/usage.md) for more detail.
