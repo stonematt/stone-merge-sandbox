@@ -24,6 +24,10 @@ def test_convert_length_miles_to_km():
     assert convert_length(1, "mi", "km") == pytest.approx(1.609344)
 
 
+def test_convert_length_pica_to_miles():
+    assert convert_length(1, "pca", "mi") == pytest.approx(2.630470e-6, rel=1e-6)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

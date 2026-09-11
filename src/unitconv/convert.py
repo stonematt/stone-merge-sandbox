@@ -11,6 +11,7 @@ FACTORS_LENGTH = {
     "ft": 0.3048,
     "yd": 0.9144,
     "mi": 1609.344,
+    "pca": 0.00423333,
 }
 
 # Mass base unit: gram.
