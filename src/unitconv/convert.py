@@ -28,6 +28,7 @@ FACTORS_LENGTH = {
     "std": 185.0,
     "th": 2.54e-05,
     "ell": 1.143,
+    "nmi": 1852.0,
 }
 
 # Mass base unit: gram.
