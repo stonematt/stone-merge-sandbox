@@ -18,7 +18,10 @@ unitconv <value> <from_unit> <to_unit>
 
 Length and mass conversions use a simple linear factor table, so any pair of
 units within the same category can be combined directly, for example
-`unitconv 3 ft yd` or `unitconv 2 lb oz`. Temperature conversions between
+`unitconv 3 ft yd` or `unitconv 2 lb oz`. The two tables cover a mix of
+everyday, historical, and scientific units — for where the less obvious ones
+came from, and why some of their factors look so specific, see
+[`history-of-units.md`](history-of-units.md). Temperature conversions between
 Celsius (`c`), Fahrenheit (`f`), and Kelvin (`k`) are handled separately since
 they are not simple linear scalings of a shared base unit — see
 [`temperature-scales.md`](temperature-scales.md) for how those conversions
