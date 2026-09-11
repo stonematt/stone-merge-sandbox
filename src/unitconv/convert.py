@@ -58,6 +58,8 @@ FACTORS_LENGTH = {
     "non": 0.00164,
     "jo": 3.03,
     "zm": 1e-21,
+    # Legoa -- Portuguese league.
+    "leg": 6174.0,
 }
 
 # Mass base unit: gram.
