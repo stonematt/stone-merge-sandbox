@@ -12,3 +12,4 @@ All notable changes to this project will be documented in this file.
 - Add `au` to the supported length units.
 - Add `Tm` to the supported length units.
 - Add `dam` to the supported length units.
+- Add `am` to the supported length units.
