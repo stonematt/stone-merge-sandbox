@@ -16,6 +16,7 @@ FACTORS_LENGTH = {
     "pc": 3.0856775814913673e16,
     "xu": 1.0021e-13,
     "ri": 3927.27,
+    "arsh": 0.7112,
 }
 
 # Mass base unit: gram.

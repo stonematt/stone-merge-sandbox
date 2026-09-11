@@ -32,6 +32,15 @@ def test_convert_length_ri_to_miles():
     assert convert_length(1, "ri", "mi") == pytest.approx(2.4402924421379146)
 
 
+def test_convert_length_arshin_to_m_and_back():
+    assert convert_length(1, "arsh", "m") == pytest.approx(0.7112)
+    assert convert_length(0.7112, "m", "arsh") == pytest.approx(1.0)
+
+
+def test_convert_length_arshin_to_inches():
+    assert convert_length(1, "arsh", "in") == pytest.approx(28.0)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
