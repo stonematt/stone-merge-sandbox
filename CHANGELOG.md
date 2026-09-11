@@ -14,3 +14,4 @@ All notable changes to this project will be documented in this file.
 - Add `dam` to the supported length units.
 - Add `pol` to the supported length units.
 - Add `szh` to the supported length units.
+- Add `vst` to the supported length units.

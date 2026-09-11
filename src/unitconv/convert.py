@@ -38,6 +38,8 @@ FACTORS_LENGTH = {
     "pol": 5.0292,
     # Russian sazhen -- exactly 7 ft.
     "szh": 2.1336,
+    # Russian verst -- 500 sazhen.
+    "vst": 1066.8,
 }
 
 # Mass base unit: gram.
