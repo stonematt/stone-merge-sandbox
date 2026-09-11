@@ -36,6 +36,8 @@ FACTORS_LENGTH = {
     "dam": 10.0,
     # Same length as "rd" (rod) and "prc" (perch) -- all three name one unit.
     "pol": 5.0292,
+    # Russian sazhen -- exactly 7 ft.
+    "szh": 2.1336,
 }
 
 # Mass base unit: gram.
