@@ -56,6 +56,10 @@ def test_convert_length_nautical_mile_to_miles():
     assert convert_length(1, "nmi", "mi") == pytest.approx(1.1507794480235425)
 
 
+def test_convert_length_mickey_to_miles():
+    assert convert_length(1, "mky", "mi") == pytest.approx(7.89141414141414e-08)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
