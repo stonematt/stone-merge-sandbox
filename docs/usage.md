@@ -5,7 +5,9 @@ If you do not have the `unitconv` command yet, see
 install, one conversion, the supported units — see
 [`quickstart.md`](quickstart.md). This page covers the command; to call
 `unitconv` as a Python library instead, see
-[`api-reference.md`](api-reference.md). For how changes get from a branch to a
+[`api-reference.md`](api-reference.md); for calling the command from a shell
+script — exit codes, parsing the output line, batch loops — see
+[`scripting.md`](scripting.md). For how changes get from a branch to a
 tagged release, see [`release-process.md`](release-process.md); for what to
 record in `CHANGELOG.md` along the way, see
 [`changelog-conventions.md`](changelog-conventions.md).
