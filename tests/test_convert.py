@@ -45,6 +45,11 @@ def test_convert_mass_oz_to_g():
     assert convert_mass(1, "oz", "g") == pytest.approx(28.349523125)
 
 
+def test_convert_mass_decigram_to_kg_and_back():
+    assert convert_mass(1, "dg", "kg") == pytest.approx(0.0001)
+    assert convert_mass(0.0001, "kg", "dg") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_kg_and_back():
     assert convert_mass(1, "st", "kg") == pytest.approx(6.35029318)
     assert convert_mass(6.35029318, "kg", "st") == pytest.approx(1.0)
