@@ -10,7 +10,9 @@ script — exit codes, parsing the output line, batch loops — see
 [`scripting.md`](scripting.md). For how changes get from a branch to a
 tagged release, see [`release-process.md`](release-process.md); for what to
 record in `CHANGELOG.md` along the way, see
-[`changelog-conventions.md`](changelog-conventions.md).
+[`changelog-conventions.md`](changelog-conventions.md). For the far end of
+the length table — the parsec, the gigametre, and what is deliberately
+absent — see [`astronomical-units.md`](astronomical-units.md).
 
 `unitconv` takes three positional arguments: a numeric value, the unit to
 convert from, and the unit to convert to. It prints the converted value to
