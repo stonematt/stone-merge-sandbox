@@ -129,6 +129,11 @@ def test_convert_mass_gamma_to_kg_and_back():
     assert convert_mass(1e-09, "kg", "gam") == pytest.approx(1.0)
 
 
+def test_convert_mass_grain_to_kg_and_back():
+    assert convert_mass(1, "gr", "kg") == pytest.approx(6.479891e-05)
+    assert convert_mass(6.479891e-05, "kg", "gr") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
