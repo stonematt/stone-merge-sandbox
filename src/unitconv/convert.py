@@ -13,6 +13,7 @@ FACTORS_LENGTH = {
     "mi": 1609.344,
     "rop": 6.096,
     "nm": 1e-09,
+    "pc": 3.0856775814913673e16,
 }
 
 # Mass base unit: gram.
