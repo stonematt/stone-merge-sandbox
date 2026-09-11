@@ -139,6 +139,11 @@ def test_convert_mass_short_ton_to_kg_and_back():
     assert convert_mass(907.18474, "kg", "tn") == pytest.approx(1.0)
 
 
+def test_convert_mass_jewellers_point_to_kg_and_back():
+    assert convert_mass(1, "jpt", "kg") == pytest.approx(2e-06)
+    assert convert_mass(2e-06, "kg", "jpt") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
