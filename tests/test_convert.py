@@ -88,6 +88,11 @@ def test_convert_mass_short_hundredweight_to_kg_and_back():
     assert convert_mass(45.359237, "kg", "scwt") == pytest.approx(1.0)
 
 
+def test_convert_mass_tonne_to_kg_and_back():
+    assert convert_mass(1, "t", "kg") == pytest.approx(1000.0)
+    assert convert_mass(1000.0, "kg", "t") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
