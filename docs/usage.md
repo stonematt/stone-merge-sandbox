@@ -22,7 +22,9 @@ thousandth-of-an-inch units that stand in for them, see
 do at all — the categories, formats, and flags that are absent — see
 [`limitations.md`](limitations.md). For the nautical mile, the fathom, and
 why the knot is not in the table, see
-[`nautical-units.md`](nautical-units.md).
+[`nautical-units.md`](nautical-units.md). For what to do before opening a
+pull request that adds a unit or fixes a factor, see
+[`contributing.md`](contributing.md).
 
 `unitconv` takes three positional arguments: a numeric value, the unit to
 convert from, and the unit to convert to. It prints the converted value to
