@@ -70,6 +70,11 @@ def test_convert_mass_mina_to_kg_and_back():
     assert convert_mass(0.43, "kg", "mna") == pytest.approx(1.0)
 
 
+def test_convert_mass_picul_to_kg_and_back():
+    assert convert_mass(1, "pcl", "kg") == pytest.approx(60.478982)
+    assert convert_mass(60.478982, "kg", "pcl") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
