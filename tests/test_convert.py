@@ -56,6 +56,10 @@ def test_convert_length_nautical_mile_to_miles():
     assert convert_length(1, "nmi", "mi") == pytest.approx(1.1507794480235425)
 
 
+def test_convert_length_barleycorn_to_feet():
+    assert convert_length(1, "bc", "ft") == pytest.approx(0.02777778871391076)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
