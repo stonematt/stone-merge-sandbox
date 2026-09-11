@@ -73,6 +73,13 @@ def test_convert_length_decametre_to_metres_and_back():
     assert convert_length(10.0, "m", "dam") == pytest.approx(1.0)
 
 
+def test_convert_length_pole_to_metres_and_back():
+    for magnitude in (0.001, 1.0, 1000.0):
+        metres = convert_length(magnitude, "pol", "m")
+        assert metres == pytest.approx(magnitude * 5.0292)
+        assert convert_length(metres, "m", "pol") == pytest.approx(magnitude)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

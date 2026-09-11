@@ -34,6 +34,8 @@ FACTORS_LENGTH = {
     "au": 149597870700.0,
     "Tm": 1000000000000.0,
     "dam": 10.0,
+    # Same length as "rd" (rod) and "prc" (perch) -- all three name one unit.
+    "pol": 5.0292,
 }
 
 # Mass base unit: gram.
