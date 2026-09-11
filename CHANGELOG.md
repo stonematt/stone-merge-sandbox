@@ -18,3 +18,4 @@ All notable changes to this project will be documented in this file.
 - Add `fur` to the supported length units.
 - Add `plm` to the supported length units.
 - Add `hh` to the supported length units.
+- Add `cbl` to the supported length units.
