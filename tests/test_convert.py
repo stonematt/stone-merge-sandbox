@@ -94,6 +94,13 @@ def test_convert_length_verst_to_metres_and_back():
         assert convert_length(metres, "m", "vst") == pytest.approx(magnitude)
 
 
+def test_convert_length_furlong_to_metres_and_back():
+    for magnitude in (0.001, 1.0, 1000.0):
+        metres = convert_length(magnitude, "fur", "m")
+        assert metres == pytest.approx(magnitude * 201.168)
+        assert convert_length(metres, "m", "fur") == pytest.approx(magnitude)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
