@@ -45,6 +45,8 @@ FACTORS_LENGTH = {
     # Palm -- exactly 3 in.
     "plm": 0.0762,
     "cbt": 0.4572,
+    # Hand -- exactly 4 in.
+    "hh": 0.1016,
 }
 
 # Mass base unit: gram.

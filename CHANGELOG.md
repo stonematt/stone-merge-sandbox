@@ -17,3 +17,4 @@ All notable changes to this project will be documented in this file.
 - Add `vst` to the supported length units.
 - Add `fur` to the supported length units.
 - Add `plm` to the supported length units.
+- Add `hh` to the supported length units.
