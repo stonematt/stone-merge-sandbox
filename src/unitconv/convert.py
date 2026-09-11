@@ -51,6 +51,8 @@ FACTORS_LENGTH = {
     # Cable -- a tenth of a nautical mile ("nmi").
     "cbl": 185.2,
     "fot": 0.2969,
+    # Hank (textile) -- 840 yd of yarn.
+    "hnk": 768.1,
 }
 
 # Mass base unit: gram.
