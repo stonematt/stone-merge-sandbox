@@ -19,3 +19,4 @@ All notable changes to this project will be documented in this file.
 - Add `plm` to the supported length units.
 - Add `hh` to the supported length units.
 - Add `cbl` to the supported length units.
+- Add `hnk` to the supported length units.
