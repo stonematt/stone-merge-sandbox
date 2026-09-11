@@ -3,7 +3,9 @@
 If you do not have the `unitconv` command yet, see
 [`installation.md`](installation.md). For the short version of this page —
 install, one conversion, the supported units — see
-[`quickstart.md`](quickstart.md). For how changes get from a branch to a
+[`quickstart.md`](quickstart.md). This page covers the command; to call
+`unitconv` as a Python library instead, see
+[`api-reference.md`](api-reference.md). For how changes get from a branch to a
 tagged release, see [`release-process.md`](release-process.md); for what to
 record in `CHANGELOG.md` along the way, see
 [`changelog-conventions.md`](changelog-conventions.md).
@@ -85,4 +87,6 @@ exactly representable in binary floating point may also show the usual
 artifacts in the trailing digits. If you need a fixed number of decimal
 places, round at the point of use — for example by piping the output through
 `printf`, or by calling `convert_length`, `convert_mass`, and the temperature
-helpers directly and rounding the returned float yourself.
+helpers directly and rounding the returned float yourself. Those functions,
+their arguments, and the errors they raise are documented in
+[`api-reference.md`](api-reference.md).
