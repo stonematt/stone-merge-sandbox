@@ -19,6 +19,7 @@ FACTORS_LENGTH = {
     "mil": 2.54e-05,
     "rd": 5.0292,
     "Gm": 1000000000.0,
+    "ch": 20.1168,
 }
 
 # Mass base unit: gram.
