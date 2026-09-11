@@ -58,7 +58,7 @@ FACTORS_LENGTH = {
     "non": 0.00164,
     "jo": 3.03,
     "zm": 1e-21,
-    # Pouce -- the French inch, a twelfth of the pied du roi ("fot").
+    # Pouce -- the French inch, a twelfth of the pied du roi.
     "pou": 0.02707,
 }
 
