@@ -30,7 +30,10 @@ plain floats — see [`design-notes.md`](design-notes.md). For why results are
 never rounded and how to get a fixed number of decimal places, see
 [`rounding.md`](rounding.md). For what the command returns to the shell on
 success and on each kind of failure, see
-[`cli-exit-codes.md`](cli-exit-codes.md).
+[`cli-exit-codes.md`](cli-exit-codes.md). For worked examples of calling
+the library from Python — the imports, temperature chaining, and handling
+an unknown unit — see
+[`python-api-examples.md`](python-api-examples.md).
 
 `unitconv` takes three positional arguments: a numeric value, the unit to
 convert from, and the unit to convert to. It prints the converted value to

@@ -26,3 +26,5 @@ All notable changes to this project will be documented in this file.
   artifacts, and how to round at the point of use.
 - Add a CLI exit codes page covering the three codes, which stream carries the
   message, and why a capitalised unit exits `1`.
+- Add a Python API examples page covering the imports, chaining temperature
+  through Celsius, handling an unknown unit, and why unit case matters.
