@@ -89,6 +89,8 @@ FACTORS_LENGTH = {
     "eld": 0.687,
     # Zettametre -- 1e21 m; the counterpart to the zeptometre "zm" (case-sensitive).
     "Zm": 1e21,
+    # Agate (typographic) -- a 5.5-point measure, about 1/14 in.
+    "agt": 0.00181,
 }
 
 # Mass base unit: gram.
