@@ -8,6 +8,9 @@ shared base is what makes that true.
 
 These are the entries worth knowing at that end of the table:
 
+- `Zm` — the zettametre, 1e21 m. Note the capital `Z`: lookup is
+  case-sensitive, and `zm` is the zeptometre at the opposite end of the
+  table (1e-21 m).
 - `pc` — the parsec, 3.0856775814913673e16 m, sized by the geometry of a
   parallax measurement rather than by convention. Where it came from is in
   [`history-of-units.md`](history-of-units.md).
