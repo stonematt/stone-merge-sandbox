@@ -93,6 +93,8 @@ FACTORS_LENGTH = {
     "agt": 0.00181,
     # Legua (Spanish league) -- the Castilian league; "pul" above is the Spanish inch.
     "lgu": 4190.0,
+    # Vara castellana (surveying) -- the Castilian vara; "pul" above is the Spanish inch.
+    "vac": 0.8382,
 }
 
 # Mass base unit: gram.
