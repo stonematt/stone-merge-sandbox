@@ -109,6 +109,7 @@ FACTORS_MASS = {
     "tla": 11.6638038,
     "mrk": 248.8278144,
     "mnd": 37324.2,
+    "fg": 1e-15,
 }
 
 # Reserved for the rounding option; nothing reads this yet.
