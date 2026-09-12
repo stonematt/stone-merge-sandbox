@@ -204,6 +204,17 @@ def test_convert_length_actus_full_name():
         assert convert_length(1, name, "m") == pytest.approx(35.5)
 
 
+def test_convert_length_vara_portuguese_to_inches():
+    for magnitude in (0.001, 1.0, 1000.0):
+        inches = convert_length(magnitude, "vrp", "in")
+        assert inches == pytest.approx(magnitude * 1.1 / 0.0254)
+
+
+def test_convert_length_vara_portuguese_full_name():
+    for name in ("vara (Portuguese)", "VARA (PORTUGUESE)", "  vara (portuguese)  "):
+        assert convert_length(1, name, "m") == pytest.approx(1.1)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

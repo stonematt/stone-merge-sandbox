@@ -77,6 +77,8 @@ FACTORS_LENGTH = {
     "hst": 0.457,
     # Actus (Roman) -- spelled out as "actus (Roman)" in _lookup.
     "act": 35.5,
+    # Vara (Portuguese) -- spelled out as "vara (Portuguese)" in _lookup.
+    "vrp": 1.1,
 }
 
 # Mass base unit: gram.
@@ -155,6 +157,7 @@ _FULL_NAMES = {
     "pous (greek foot)": "pous",
     "roede (Dutch rod)": "roe",
     "sun (Japanese)": "sun",
+    "vara (portuguese)": "vrp",
     "vitasti (indian span)": "vit",
 }
 
