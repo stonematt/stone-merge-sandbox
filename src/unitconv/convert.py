@@ -111,6 +111,7 @@ FACTORS_MASS = {
     "mnd": 37324.2,
     "fg": 1e-15,
     "clv": 3628.74,
+    "fun": 0.375,
 }
 
 # Reserved for the rounding option; nothing reads this yet.
