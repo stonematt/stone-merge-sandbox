@@ -236,6 +236,20 @@ def test_convert_length_meters_to_voet():
         assert convert_length(magnitude, "m", "voe") == pytest.approx(magnitude / 0.2831)
 
 
+def test_convert_length_light_minutes_to_meters():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "lmin", "m") == pytest.approx(
+            magnitude * 17987547480.0
+        )
+
+
+def test_convert_length_meters_to_light_minutes():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "m", "lmin") == pytest.approx(
+            magnitude / 17987547480.0
+        )
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
