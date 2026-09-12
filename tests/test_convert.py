@@ -250,6 +250,21 @@ def test_convert_length_meters_to_light_minutes():
         )
 
 
+def test_convert_length_dutch_ells_to_meters():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "eld", "m") == pytest.approx(magnitude * 0.687)
+
+
+def test_convert_length_meters_to_dutch_ells():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "m", "eld") == pytest.approx(magnitude / 0.687)
+
+
+def test_convert_length_dutch_ell_distinct_from_english_ell():
+    assert convert_length(1, "eld", "m") == pytest.approx(0.687)
+    assert convert_length(1, "ell", "m") == pytest.approx(1.143)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
