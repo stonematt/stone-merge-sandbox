@@ -85,6 +85,8 @@ FACTORS_LENGTH = {
     "voe": 0.2831,
     # Light-minute -- exactly 60 s of light in vacuum (299792458 m/s).
     "lmin": 17987547480.0,
+    # El (Dutch ell) -- "ell" above is the English one (1.143 m).
+    "eld": 0.687,
 }
 
 # Mass base unit: gram.
