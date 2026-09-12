@@ -398,6 +398,15 @@ def test_convert_mass_megagram_is_not_milligram():
     assert convert_mass(1, "Mg", "mg") == pytest.approx(1e09)
 
 
+def test_convert_mass_arroba_spanish_to_g_exact():
+    assert convert_mass(1, "arb", "g") == 11502.9
+
+
+def test_convert_mass_arroba_spanish_to_kg_and_back():
+    assert convert_mass(1, "arb", "kg") == pytest.approx(11.5029)
+    assert convert_mass(11.5029, "kg", "arb") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 

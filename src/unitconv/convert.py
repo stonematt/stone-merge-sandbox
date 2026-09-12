@@ -126,6 +126,8 @@ FACTORS_MASS = {
     "libp": 459.0,
     # Megagram -- same magnitude as the tonne "t"; distinct from "mg" (case-sensitive).
     "Mg": 1000000.0,
+    # Arroba (Spanish) -- 25 libras; "lib" above is that libra (460 g).
+    "arb": 11502.9,
 }
 
 # Reserved for the rounding option; nothing reads this yet.
