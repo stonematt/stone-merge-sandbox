@@ -107,6 +107,8 @@ FACTORS_LENGTH = {
     "fm": 1e-15,
     # Lieue (French league) -- "lgu" above is the Spanish (Castilian) league.
     "lieu": 4444.0,
+    # Pixel (96 dpi) -- the CSS reference pixel, 1/96 in.
+    "pxl": 0.0002645833,
 }
 
 # Mass base unit: gram.
