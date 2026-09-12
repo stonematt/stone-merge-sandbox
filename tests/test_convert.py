@@ -354,6 +354,11 @@ def test_convert_mass_drachm_ottoman_to_kg_and_back():
     assert convert_mass(0.003207, "kg", "drc") == pytest.approx(1.0)
 
 
+def test_convert_mass_libra_castilian_to_kg_and_back():
+    assert convert_mass(1, "lib", "kg") == pytest.approx(0.46)
+    assert convert_mass(0.46, "kg", "lib") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
