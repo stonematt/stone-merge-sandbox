@@ -226,6 +226,16 @@ def test_convert_length_fut_full_name():
         assert convert_length(1, name, "m") == pytest.approx(0.3048)
 
 
+def test_convert_length_voet_to_meters():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "voe", "m") == pytest.approx(magnitude * 0.2831)
+
+
+def test_convert_length_meters_to_voet():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "m", "voe") == pytest.approx(magnitude / 0.2831)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

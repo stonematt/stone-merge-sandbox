@@ -81,6 +81,8 @@ FACTORS_LENGTH = {
     "pul": 0.0232,
     # Fut (Russian foot) -- same length as "ft"; spelled out as "fut (Russian foot)" in _lookup.
     "fut": 0.3048,
+    # Voet (Dutch foot) -- distinct from the Dutch rod "roe" above.
+    "voe": 0.2831,
 }
 
 # Mass base unit: gram.
