@@ -359,6 +359,11 @@ def test_convert_mass_libra_castilian_to_kg_and_back():
     assert convert_mass(0.46, "kg", "lib") == pytest.approx(1.0)
 
 
+def test_convert_mass_kan_japanese_to_kg_and_back():
+    assert convert_mass(1, "kan", "kg") == pytest.approx(3.75)
+    assert convert_mass(3.75, "kg", "kan") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
