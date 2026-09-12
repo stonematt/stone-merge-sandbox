@@ -97,6 +97,8 @@ FACTORS_LENGTH = {
     "vac": 0.8382,
     # Vershok (Russian) -- 1/16 of an arshin; "fut" above is the Russian foot.
     "vshk": 0.04445,
+    # Twip (typographic) -- a twentieth of a point, 1/1440 in.
+    "twp": 0.0000176389,
 }
 
 # Mass base unit: gram.
