@@ -330,6 +330,16 @@ def test_convert_length_meters_to_twips():
         assert convert_length(magnitude, "m", "twp") == pytest.approx(magnitude / 0.0000176389)
 
 
+def test_convert_length_cun_to_meters():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "cun", "m") == pytest.approx(magnitude * 0.0333)
+
+
+def test_convert_length_meters_to_cun():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "m", "cun") == pytest.approx(magnitude / 0.0333)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

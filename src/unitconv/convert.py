@@ -99,6 +99,8 @@ FACTORS_LENGTH = {
     "vshk": 0.04445,
     # Twip (typographic) -- a twentieth of a point, 1/1440 in.
     "twp": 0.0000176389,
+    # Cun (Chinese inch) -- 1/10 of a chi; "pul" above is the Spanish inch.
+    "cun": 0.0333,
 }
 
 # Mass base unit: gram.
