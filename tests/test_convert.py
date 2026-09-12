@@ -329,6 +329,11 @@ def test_convert_mass_mark_to_kg_and_back():
     assert convert_mass(0.2488278144, "kg", "mrk") == pytest.approx(1.0)
 
 
+def test_convert_mass_maund_to_kg_and_back():
+    assert convert_mass(1, "mnd", "kg") == pytest.approx(37.3242)
+    assert convert_mass(37.3242, "kg", "mnd") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
