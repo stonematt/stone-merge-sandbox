@@ -128,6 +128,8 @@ FACTORS_MASS = {
     "Mg": 1000000.0,
     # Arroba (Spanish) -- 25 libras; "lib" above is that libra (460 g).
     "arb": 11502.9,
+    # Candy (Indian) -- bulk trade measure, ~500 lb.
+    "cdy": 226500.0,
 }
 
 # Reserved for the rounding option; nothing reads this yet.
