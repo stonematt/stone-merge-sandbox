@@ -350,6 +350,16 @@ def test_convert_length_meters_to_tum():
         assert convert_length(magnitude, "m", "tum") == pytest.approx(magnitude / 0.0247)
 
 
+def test_convert_length_femtometres_to_meters():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "fm", "m") == pytest.approx(magnitude * 1e-15)
+
+
+def test_convert_length_meters_to_femtometres():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "m", "fm") == pytest.approx(magnitude / 1e-15)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

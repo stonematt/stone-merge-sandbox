@@ -103,6 +103,8 @@ FACTORS_LENGTH = {
     "jbu": 0.00303,
     # Tum (Swedish inch) -- the pre-metric Swedish inch; "in" above is the English one.
     "tum": 0.0247,
+    # Femtometre -- 1e-15 m; also known as the fermi in nuclear physics.
+    "fm": 1e-15,
 }
 
 # Mass base unit: gram.
