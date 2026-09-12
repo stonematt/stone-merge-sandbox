@@ -344,6 +344,11 @@ def test_convert_mass_clove_to_kg_and_back():
     assert convert_mass(3.62874, "kg", "clv") == pytest.approx(1.0)
 
 
+def test_convert_mass_fun_to_kg_and_back():
+    assert convert_mass(1, "fun", "kg") == pytest.approx(0.000375)
+    assert convert_mass(0.000375, "kg", "fun") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
