@@ -1,8 +1,18 @@
 """Conversion routines for length, mass, and temperature."""
+import re
+import functools
 
 # All factors express "how many base units per 1 of this unit".
 # Length base unit: meter.
 FACTORS_LENGTH = {
+    # Cicero (typographic) -- spelled out as "cicero" in _lookup.
+    "cic": 0.004513,
+    # Pous (Greek foot) -- spelled out as "pous (Greek foot)" in _lookup.
+    "pous": 0.308,
+    # Vitasti (Indian span) -- spelled out as "vitasti (Indian span)" in _lookup.
+    "vit": 0.2286,
+    # Em (typographic) -- spelled out as "em (typographic)" in _lookup.
+    "emu": 0.0042333,
     "mm": 0.001,
     "cm": 0.01,
     "m": 1.0,
@@ -11,16 +21,113 @@ FACTORS_LENGTH = {
     "ft": 0.3048,
     "yd": 0.9144,
     "mi": 1609.344,
+    "rop": 6.096,
+    "nm": 1e-09,
+    "pc": 3.0856775814913673e16,
+    "xu": 1.0021e-13,
+    "ri": 3927.27,
+    "mil": 2.54e-05,
+    "rd": 5.0292,
+    "Gm": 1000000000.0,
+    "ch": 20.1168,
+    "prc": 5.0292,
+    "ftm": 1.8288,
+    "pce": 0.762,
+    "mu": 1e-6,
+    "lnk": 0.201168,
+    "std": 185.0,
+    "th": 2.54e-05,
+    "ell": 1.143,
+    "nmi": 1852.0,
+    "Mm": 1000000.0,
+    "bc": 0.00846667,
+    "au": 149597870700.0,
+    "Tm": 1000000000000.0,
+    "dam": 10.0,
+    # Same length as "rd" (rod) and "prc" (perch) -- all three name one unit.
+    "pol": 5.0292,
+    # Russian sazhen -- exactly 7 ft.
+    "szh": 2.1336,
+    # Russian verst -- 500 sazhen.
+    "vst": 1066.8,
+    # Furlong -- 10 chains ("ch"), an eighth of a mile.
+    "fur": 201.168,
+    # Palm -- exactly 3 in.
+    "plm": 0.0762,
+    "cbt": 0.4572,
+    # Hand -- exactly 4 in.
+    "hh": 0.1016,
+    "ang": 1e-10,
+    # Cable -- a tenth of a nautical mile ("nmi").
+    "cbl": 185.2,
+    "fot": 0.2969,
+    # Hank (textile) -- 840 yd of yarn.
+    "hnk": 768.1,
+    "kpc": 3.0856775814913673e19,
+    # Nonpareil -- a 6-point typographic measure.
+    "non": 0.00164,
+    "jo": 3.03,
+    "zm": 1e-21,
+    "prl": 0.001307,
+    "brc": 2.2,
+    "sun": 0.0303,
+    "roe": 3.767,
+    "kos": 3218.0,
+    # Hasta (Indian cubit) -- spelled out as "hasta (Indian cubit)" in _lookup.
+    "hst": 0.457,
+    # Actus (Roman) -- spelled out as "actus (Roman)" in _lookup.
+    "act": 35.5,
+    # Pulgada (Spanish inch) -- spelled out as "pulgada (Spanish inch)" in _lookup.
+    "pul": 0.0232,
+    # Fut (Russian foot) -- same length as "ft"; spelled out as "fut (Russian foot)" in _lookup.
+    "fut": 0.3048,
 }
 
 # Mass base unit: gram.
 FACTORS_MASS = {
     "mg": 0.001,
+    "cg": 0.01,
+    "dg": 0.1,
     "g": 1.0,
     "kg": 1000.0,
+    "dr": 1.7718451953125,
     "oz": 28.349523125,
+    "ozt": 31.1034768,
     "lb": 453.59237,
+    "st": 6350.29318,
+    "mna": 430.0,
+    "pcl": 60478.982,
+    "scwt": 45359.237,
+    "t": 1000000.0,
+    "at": 29.16666,
+    "tl": 37.799364,
+    "cdr": 0.37799364,
+    "gam": 1e-06,
+    "gr": 0.06479891,
+    "tn": 907184.74,
+    "jpt": 0.002,
+    "tla": 11.6638038,
+    "mrk": 248.8278144,
+    "mnd": 37324.2,
+    "fg": 1e-15,
+    "clv": 3628.74,
+    "fun": 0.375,
+    "drc": 3.207,
+    "lib": 460.0,
+    "kan": 3750.0,
+    "Da": 1.6605390666e-24,
+    # Long hundredweight -- 112 lb; "scwt" above is the short (100 lb) one.
+    "cwt": 50802.34544,
+    # Sack (wool) -- 26 st (364 lb).
+    "sck": 165107.62,
+    # Troy pound -- 12 ozt; "lb" above is the avoirdupois (16 oz) one.
+    "lbt": 373.2417216,
+    # Libra (Portuguese) -- "lib" above is the Castilian one (460 g).
+    "libp": 459.0,
 }
+
+# Reserved for the rounding option; nothing reads this yet.
+DEFAULT_DECIMALS_dam = 3
 
 
 def convert_length(value: float, from_unit: str, to_unit: str) -> float:
@@ -57,8 +164,33 @@ def kelvin_to_celsius(value: float) -> float:
     return value - 273.15
 
 
+_FULL_NAMES = {
+    "actus (roman)": "act",
+    "braça (Portuguese fathom)": "brc",
+    "cicero": "cic",
+    "em (typographic)": "emu",
+    "fut (russian foot)": "fut",
+    "hasta (indian cubit)": "hst",
+    "kos (Indian)": "kos",
+    "pearl (printing)": "prl",
+    "pous (greek foot)": "pous",
+    "pulgada (spanish inch)": "pul",
+    "roede (Dutch rod)": "roe",
+    "sun (Japanese)": "sun",
+    "vitasti (indian span)": "vit",
+}
+
+
 def _lookup(table: dict, unit: str) -> float:
-    try:
-        return table[unit]
-    except KeyError as exc:
-        raise ValueError(f"unsupported unit: {unit!r}") from exc
+    """Look a unit up in a table, accepting the spelled-out name too."""
+    def _normalize(u):
+        return re.sub(r"\s+", " ", str(u).strip().lower())
+
+    text = str(unit).strip()
+    if text in table:
+        return table[text]
+    key = _FULL_NAMES.get(_normalize(text))
+    if key is not None and key in table:
+        return table[key]
+    known = ", ".join(sorted(table))
+    raise ValueError(f"unsupported unit: {unit!r} (supported: {known})")
