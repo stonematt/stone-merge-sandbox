@@ -91,6 +91,8 @@ FACTORS_LENGTH = {
     "Zm": 1e21,
     # Agate (typographic) -- a 5.5-point measure, about 1/14 in.
     "agt": 0.00181,
+    # Legua (Spanish league) -- the Castilian league; "pul" above is the Spanish inch.
+    "lgu": 4190.0,
 }
 
 # Mass base unit: gram.
