@@ -101,6 +101,8 @@ FACTORS_LENGTH = {
     "twp": 0.0000176389,
     # Bu (Japanese) -- 1/10 of a sun, 1/100 of a shaku.
     "jbu": 0.00303,
+    # Tum (Swedish inch) -- the pre-metric Swedish inch; "in" above is the English one.
+    "tum": 0.0247,
 }
 
 # Mass base unit: gram.
