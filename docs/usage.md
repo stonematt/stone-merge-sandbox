@@ -26,7 +26,9 @@ why the knot is not in the table, see
 pull request that adds a unit or fixes a factor, see
 [`contributing.md`](contributing.md). For how the command is put together —
 the library and CLI layers, how a category is chosen, and why results are
-plain floats — see [`design-notes.md`](design-notes.md).
+plain floats — see [`design-notes.md`](design-notes.md). For why results are
+never rounded and how to get a fixed number of decimal places, see
+[`rounding.md`](rounding.md).
 
 `unitconv` takes three positional arguments: a numeric value, the unit to
 convert from, and the unit to convert to. It prints the converted value to
@@ -97,14 +99,9 @@ float, so `5` is printed back as `5.0`.
 `unitconv` does not round. Results are printed with Python's default float
 formatting, which means you get the full precision of the underlying
 double — hence `154.3235835294143` rather than `154.32` for the mass example
-above. Some conversions look tidy anyway, either because the factor is exact
-in decimal (`mi` to `km` is defined as 1609.344) or because the arithmetic
-happens to land on a round number (20 °C to 68 °F), but that is a property of
-those particular inputs, not a formatting rule. Conversions that are not
-exactly representable in binary floating point may also show the usual
-artifacts in the trailing digits. If you need a fixed number of decimal
-places, round at the point of use — for example by piping the output through
-`printf`, or by calling `convert_length`, `convert_mass`, and the temperature
-helpers directly and rounding the returned float yourself. Those functions,
-their arguments, and the errors they raise are documented in
-[`api-reference.md`](api-reference.md).
+above. Some conversions look tidy anyway (`20.0 c = 68.0 f`), but that is a
+property of those particular inputs, not a formatting rule.
+
+[`rounding.md`](rounding.md) covers this in full: why tidy results are a
+coincidence, the trailing-digit artifacts to expect, and how to round at the
+point of use from a shell or from Python.
