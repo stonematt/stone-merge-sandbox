@@ -75,6 +75,8 @@ FACTORS_LENGTH = {
     "kos": 3218.0,
     # Hasta (Indian cubit) -- spelled out as "hasta (Indian cubit)" in _lookup.
     "hst": 0.457,
+    # Actus (Roman) -- spelled out as "actus (Roman)" in _lookup.
+    "act": 35.5,
 }
 
 # Mass base unit: gram.
@@ -143,6 +145,7 @@ def kelvin_to_celsius(value: float) -> float:
 
 
 _FULL_NAMES = {
+    "actus (roman)": "act",
     "braça (Portuguese fathom)": "brc",
     "cicero": "cic",
     "em (typographic)": "emu",
