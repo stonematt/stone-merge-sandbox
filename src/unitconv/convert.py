@@ -122,6 +122,8 @@ FACTORS_MASS = {
     "sck": 165107.62,
     # Troy pound -- 12 ozt; "lb" above is the avoirdupois (16 oz) one.
     "lbt": 373.2417216,
+    # Libra (Portuguese) -- "lib" above is the Castilian one (460 g).
+    "libp": 459.0,
 }
 
 # Reserved for the rounding option; nothing reads this yet.
