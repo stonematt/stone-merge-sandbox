@@ -10,6 +10,8 @@ shares with engineering: the thousandth of an inch, spelled two ways.
   practice, and the one to reach for with paper and plate thicknesses.
 - `th` — the thou, the same 2.54e-05 m under its British name. The two
   entries are interchangeable; `unitconv 1 mil th` returns `1.0`.
+- `agt` — the agate, 0.00181 m. A 5.5-point measure, about 1/14 in, used to
+  size newspaper classified and small-ad column depth.
 - `in`, `mm`, and `cm` — the units a point measurement usually has to land
   in, whether for a page size or a press setting.
 - `pt` and `pica` are absent, as is the older Didot point. Their sizes are

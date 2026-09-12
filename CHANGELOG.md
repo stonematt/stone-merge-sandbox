@@ -22,6 +22,7 @@ All notable changes to this project will be documented in this file.
 - Add `hnk` to the supported length units.
 - Add `lmin` to the supported length units.
 - Add `eld` to the supported length units.
+- Add `agt` to the supported length units.
 - Add a design notes page covering the library and CLI layers, how a
   conversion category is chosen, and why results are plain floats.
 - Add a rounding behaviour page covering full-precision output, trailing-digit

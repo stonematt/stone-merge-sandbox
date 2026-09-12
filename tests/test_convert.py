@@ -280,6 +280,16 @@ def test_convert_length_zettametre_distinct_from_zeptometre():
     assert convert_length(1, "zm", "m") == pytest.approx(1e-21)
 
 
+def test_convert_length_agates_to_meters():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "agt", "m") == pytest.approx(magnitude * 0.00181)
+
+
+def test_convert_length_meters_to_agates():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "m", "agt") == pytest.approx(magnitude / 0.00181)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
