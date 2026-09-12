@@ -77,6 +77,8 @@ FACTORS_LENGTH = {
     "hst": 0.457,
     # Actus (Roman) -- spelled out as "actus (Roman)" in _lookup.
     "act": 35.5,
+    # Pulgada (Spanish inch) -- spelled out as "pulgada (Spanish inch)" in _lookup.
+    "pul": 0.0232,
 }
 
 # Mass base unit: gram.
@@ -153,6 +155,7 @@ _FULL_NAMES = {
     "kos (Indian)": "kos",
     "pearl (printing)": "prl",
     "pous (greek foot)": "pous",
+    "pulgada (spanish inch)": "pul",
     "roede (Dutch rod)": "roe",
     "sun (Japanese)": "sun",
     "vitasti (indian span)": "vit",
