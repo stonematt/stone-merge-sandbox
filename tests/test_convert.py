@@ -380,6 +380,16 @@ def test_convert_length_meters_to_pixels():
         assert convert_length(magnitude, "m", "pxl") == pytest.approx(magnitude / 0.0002645833)
 
 
+def test_convert_length_aunes_to_meters():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "aun", "m") == pytest.approx(magnitude * 1.192)
+
+
+def test_convert_length_meters_to_aunes():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "m", "aun") == pytest.approx(magnitude / 1.192)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

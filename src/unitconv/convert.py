@@ -109,6 +109,8 @@ FACTORS_LENGTH = {
     "lieu": 4444.0,
     # Pixel (96 dpi) -- the CSS reference pixel, 1/96 in.
     "pxl": 0.0002645833,
+    # Aune (French ell) -- "ell" above is the English one, "eld" the Dutch.
+    "aun": 1.192,
 }
 
 # Mass base unit: gram.
