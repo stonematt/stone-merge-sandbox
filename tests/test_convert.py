@@ -374,6 +374,11 @@ def test_convert_mass_long_hundredweight_to_kg_and_back():
     assert convert_mass(50.80234544, "kg", "cwt") == pytest.approx(1.0)
 
 
+def test_convert_mass_sack_wool_to_kg_and_back():
+    assert convert_mass(1, "sck", "kg") == pytest.approx(165.10762)
+    assert convert_mass(165.10762, "kg", "sck") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
