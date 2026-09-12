@@ -4,6 +4,8 @@ import functools
 # All factors express "how many base units per 1 of this unit".
 # Length base unit: meter.
 FACTORS_LENGTH = {
+    # Pous (Greek foot) -- spelled out as "pous (Greek foot)" in _lookup.
+    "pous": 0.308,
     # Vitasti (Indian span) -- spelled out as "vitasti (Indian span)" in _lookup.
     "vit": 0.2286,
     # Em (typographic) -- spelled out as "em (typographic)" in _lookup.
@@ -143,6 +145,7 @@ def _canonical(unit):
         "roede (Dutch rod)": "roe",
         "sun (Japanese)": "sun",
         "vitasti (indian span)": "vit",
+        "pous (greek foot)": "pous",
     }
     text = str(unit).strip()
     return aliases.get(text.lower(), text)
