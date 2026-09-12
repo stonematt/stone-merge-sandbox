@@ -182,6 +182,17 @@ def test_convert_length_cicero_full_name():
         assert convert_length(1, name, "m") == pytest.approx(0.004513)
 
 
+def test_convert_length_hasta_to_inches():
+    for magnitude in (0.001, 1.0, 1000.0):
+        inches = convert_length(magnitude, "hst", "in")
+        assert inches == pytest.approx(magnitude * 0.457 / 0.0254)
+
+
+def test_convert_length_hasta_full_name():
+    for name in ("hasta (Indian cubit)", "HASTA (INDIAN CUBIT)", "  hasta (indian cubit)  "):
+        assert convert_length(1, name, "m") == pytest.approx(0.457)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

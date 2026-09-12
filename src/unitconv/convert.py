@@ -73,6 +73,8 @@ FACTORS_LENGTH = {
     "sun": 0.0303,
     "roe": 3.767,
     "kos": 3218.0,
+    # Hasta (Indian cubit) -- spelled out as "hasta (Indian cubit)" in _lookup.
+    "hst": 0.457,
 }
 
 # Mass base unit: gram.
@@ -144,6 +146,7 @@ _FULL_NAMES = {
     "braça (Portuguese fathom)": "brc",
     "cicero": "cic",
     "em (typographic)": "emu",
+    "hasta (indian cubit)": "hst",
     "kos (Indian)": "kos",
     "pearl (printing)": "prl",
     "pous (greek foot)": "pous",
