@@ -289,6 +289,11 @@ def test_convert_mass_tael_to_kg_and_back():
     assert convert_mass(0.037799364, "kg", "tl") == pytest.approx(1.0)
 
 
+def test_convert_mass_mace_to_kg_and_back():
+    assert convert_mass(1, "mce", "kg") == pytest.approx(0.0037799364)
+    assert convert_mass(0.0037799364, "kg", "mce") == pytest.approx(1.0)
+
+
 def test_convert_mass_candareen_to_kg_and_back():
     assert convert_mass(1, "cdr", "kg") == pytest.approx(0.00037799364)
     assert convert_mass(0.00037799364, "kg", "cdr") == pytest.approx(1.0)
