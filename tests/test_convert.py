@@ -138,6 +138,18 @@ def test_convert_length_zeptometre_to_miles():
         assert miles == pytest.approx(magnitude * 1e-21 / 1609.344)
 
 
+def test_convert_length_nail_textile_to_miles():
+    for magnitude in (0.001, 1.0, 1000.0):
+        miles = convert_length(magnitude, "nal", "mi")
+        assert miles == pytest.approx(magnitude * 0.05715 / 1609.344)
+
+
+def test_convert_length_nail_textile_full_name():
+    for name in ("nail (textile)", "Nail (Textile)", "NAIL (TEXTILE)"):
+        assert convert_length(1, name, "m") == pytest.approx(0.05715)
+        assert convert_length(0.05715, "m", name) == pytest.approx(1.0)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

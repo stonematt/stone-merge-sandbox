@@ -3,6 +3,8 @@
 # All factors express "how many base units per 1 of this unit".
 # Length base unit: meter.
 FACTORS_LENGTH = {
+    # Nail (textile) -- 2.25 in of cloth.
+    "nal": 0.05715,
     "mm": 0.001,
     "cm": 0.01,
     "m": 1.0,
@@ -87,6 +89,12 @@ FACTORS_MASS = {
     "mrk": 248.8278144,
 }
 
+# Full unit names accepted alongside the symbols in the tables above.
+# Keys are lowercase; _lookup matches case-insensitively.
+UNIT_NAME_ALIASES = {
+    "nail (textile)": "nal",
+}
+
 # Reserved for the rounding option; nothing reads this yet.
 DEFAULT_DECIMALS_dam = 3
 
@@ -126,7 +134,8 @@ def kelvin_to_celsius(value: float) -> float:
 
 
 def _lookup(table: dict, unit: str) -> float:
+    key = UNIT_NAME_ALIASES.get(unit.lower(), unit)
     try:
-        return table[unit]
+        return table[key]
     except KeyError as exc:
         raise ValueError(f"unsupported unit: {unit!r}") from exc
