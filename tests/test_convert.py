@@ -360,6 +360,16 @@ def test_convert_length_meters_to_femtometres():
         assert convert_length(magnitude, "m", "fm") == pytest.approx(magnitude / 1e-15)
 
 
+def test_convert_length_lieues_to_meters():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "lieu", "m") == pytest.approx(magnitude * 4444.0)
+
+
+def test_convert_length_meters_to_lieues():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "m", "lieu") == pytest.approx(magnitude / 4444.0)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

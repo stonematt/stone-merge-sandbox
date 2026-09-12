@@ -105,6 +105,8 @@ FACTORS_LENGTH = {
     "tum": 0.0247,
     # Femtometre -- 1e-15 m; also known as the fermi in nuclear physics.
     "fm": 1e-15,
+    # Lieue (French league) -- "lgu" above is the Spanish (Castilian) league.
+    "lieu": 4444.0,
 }
 
 # Mass base unit: gram.
