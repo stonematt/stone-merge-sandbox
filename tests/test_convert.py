@@ -384,6 +384,11 @@ def test_convert_mass_troy_pound_to_kg_and_back():
     assert convert_mass(0.3732417216, "kg", "lbt") == pytest.approx(1.0)
 
 
+def test_convert_mass_libra_portuguese_to_kg_and_back():
+    assert convert_mass(1, "libp", "kg") == pytest.approx(0.459)
+    assert convert_mass(0.459, "kg", "libp") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
