@@ -426,6 +426,15 @@ def test_convert_mass_quintal_portuguese_to_g_exact():
     assert convert_mass(1, "qpt", "g") == 58750.0
 
 
+def test_convert_mass_catty_to_g_exact():
+    # The gram factor is the base unit, so the conversion returns it unrounded.
+    assert convert_mass(1, "cat", "g") == 604.78982
+
+
+def test_convert_mass_catty_to_picul():
+    assert convert_mass(100, "cat", "pcl") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 

@@ -134,6 +134,8 @@ FACTORS_MASS = {
     "Pg": 1e15,
     # Quintal (Portuguese) -- the Portuguese arroba is not "arb" above (that one is Spanish).
     "qpt": 58750.0,
+    # Catty -- a hundredth of the picul "pcl" above.
+    "cat": 604.78982,
 }
 
 # Reserved for the rounding option; nothing reads this yet.
