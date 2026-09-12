@@ -132,6 +132,8 @@ FACTORS_MASS = {
     "cdy": 226500.0,
     # Petagram -- 1e15 g; the counterpart to the femtogram "fg" (case-sensitive).
     "Pg": 1e15,
+    # Quintal (Portuguese) -- the Portuguese arroba is not "arb" above (that one is Spanish).
+    "qpt": 58750.0,
 }
 
 # Reserved for the rounding option; nothing reads this yet.
