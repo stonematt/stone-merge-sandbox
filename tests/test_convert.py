@@ -215,6 +215,17 @@ def test_convert_length_pulgada_full_name():
         assert convert_length(1, name, "m") == pytest.approx(0.0232)
 
 
+def test_convert_length_fut_to_inches():
+    for magnitude in (0.001, 1.0, 1000.0):
+        inches = convert_length(magnitude, "fut", "in")
+        assert inches == pytest.approx(magnitude * 0.3048 / 0.0254)
+
+
+def test_convert_length_fut_full_name():
+    for name in ("fut (Russian foot)", "FUT (RUSSIAN FOOT)", "  fut (russian foot)  "):
+        assert convert_length(1, name, "m") == pytest.approx(0.3048)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
