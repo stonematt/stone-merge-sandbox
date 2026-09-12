@@ -134,6 +134,8 @@ FACTORS_MASS = {
     "Pg": 1e15,
     # Quintal (Portuguese) -- the Portuguese arroba is not "arb" above (that one is Spanish).
     "qpt": 58750.0,
+    # Seer (Indian) -- roughly 1/40 of the maund "mnd" above.
+    "ser": 933.10,
 }
 
 # Reserved for the rounding option; nothing reads this yet.
