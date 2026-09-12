@@ -124,6 +124,8 @@ FACTORS_MASS = {
     "lbt": 373.2417216,
     # Libra (Portuguese) -- "lib" above is the Castilian one (460 g).
     "libp": 459.0,
+    # Megagram -- same magnitude as the tonne "t"; distinct from "mg" (case-sensitive).
+    "Mg": 1000000.0,
 }
 
 # Reserved for the rounding option; nothing reads this yet.
