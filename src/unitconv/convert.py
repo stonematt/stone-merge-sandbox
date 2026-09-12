@@ -130,6 +130,8 @@ FACTORS_MASS = {
     "arb": 11502.9,
     # Candy (Indian) -- bulk trade measure, ~500 lb.
     "cdy": 226500.0,
+    # Petagram -- 1e15 g; the counterpart to the femtogram "fg" (case-sensitive).
+    "Pg": 1e15,
 }
 
 # Reserved for the rounding option; nothing reads this yet.

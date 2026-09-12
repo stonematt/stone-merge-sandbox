@@ -398,6 +398,12 @@ def test_convert_mass_megagram_is_not_milligram():
     assert convert_mass(1, "Mg", "mg") == pytest.approx(1e09)
 
 
+def test_convert_mass_petagram_to_g_is_exact():
+    # 1e15 is under 2**53, so the conversion lands on the integer exactly.
+    assert convert_mass(1, "Pg", "g") == 1e15
+    assert convert_mass(1e15, "g", "Pg") == 1.0
+
+
 def test_convert_mass_arroba_spanish_to_g_exact():
     assert convert_mass(1, "arb", "g") == 11502.9
 
