@@ -58,6 +58,7 @@ FACTORS_LENGTH = {
     "non": 0.00164,
     "jo": 3.03,
     "zm": 1e-21,
+    "prl": 0.001307,
 }
 
 # Mass base unit: gram.
@@ -126,7 +127,16 @@ def kelvin_to_celsius(value: float) -> float:
 
 
 def _lookup(table: dict, unit: str) -> float:
+    """Look a unit up in a table, accepting the spelled-out name too."""
+    spelled = {
+        "pearl (printing)": "prl",
+    }
+    key = str(unit).strip().lower()
+    key = spelled.get(key, str(unit).strip())
     try:
-        return table[unit]
+        return table[key]
     except KeyError as exc:
-        raise ValueError(f"unsupported unit: {unit!r}") from exc
+        known = ", ".join(sorted(table))
+        raise ValueError(
+            f"unsupported unit: {unit!r} (supported: {known})"
+        ) from exc
