@@ -99,6 +99,8 @@ FACTORS_LENGTH = {
     "vshk": 0.04445,
     # Twip (typographic) -- a twentieth of a point, 1/1440 in.
     "twp": 0.0000176389,
+    # Arpent (French) -- the linear arpent; "roe" above is the Dutch rod.
+    "arp": 58.47,
 }
 
 # Mass base unit: gram.
