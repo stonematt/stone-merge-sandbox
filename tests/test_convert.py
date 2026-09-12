@@ -426,6 +426,10 @@ def test_convert_mass_quintal_portuguese_to_g_exact():
     assert convert_mass(1, "qpt", "g") == 58750.0
 
 
+def test_convert_mass_seer_to_g_exact():
+    assert convert_mass(1, "ser", "g") == 933.10
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
