@@ -115,6 +115,7 @@ FACTORS_MASS = {
     "drc": 3.207,
     "lib": 460.0,
     "kan": 3750.0,
+    "Da": 1.6605390666e-24,
 }
 
 # Reserved for the rounding option; nothing reads this yet.

@@ -364,6 +364,11 @@ def test_convert_mass_kan_japanese_to_kg_and_back():
     assert convert_mass(3.75, "kg", "kan") == pytest.approx(1.0)
 
 
+def test_convert_mass_dalton_to_kg_and_back():
+    assert convert_mass(1, "Da", "kg") == pytest.approx(1.6605390666e-27)
+    assert convert_mass(1.6605390666e-27, "kg", "Da") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
 
