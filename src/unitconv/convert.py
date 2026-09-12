@@ -118,6 +118,8 @@ FACTORS_MASS = {
     "Da": 1.6605390666e-24,
     # Long hundredweight -- 112 lb; "scwt" above is the short (100 lb) one.
     "cwt": 50802.34544,
+    # Sack (wool) -- 26 st (364 lb).
+    "sck": 165107.62,
 }
 
 # Reserved for the rounding option; nothing reads this yet.
