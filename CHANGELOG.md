@@ -25,6 +25,7 @@ All notable changes to this project will be documented in this file.
 - Add `agt` to the supported length units.
 - Add `lgu` to the supported length units.
 - Add `vac` to the supported length units.
+- Add `vshk` to the supported length units.
 - Add a design notes page covering the library and CLI layers, how a
   conversion category is chosen, and why results are plain floats.
 - Add a rounding behaviour page covering full-precision output, trailing-digit

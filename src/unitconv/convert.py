@@ -95,6 +95,8 @@ FACTORS_LENGTH = {
     "lgu": 4190.0,
     # Vara castellana (surveying) -- the Castilian vara; "pul" above is the Spanish inch.
     "vac": 0.8382,
+    # Vershok (Russian) -- 1/16 of an arshin; "fut" above is the Russian foot.
+    "vshk": 0.04445,
 }
 
 # Mass base unit: gram.
