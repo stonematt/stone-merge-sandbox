@@ -28,7 +28,9 @@ pull request that adds a unit or fixes a factor, see
 the library and CLI layers, how a category is chosen, and why results are
 plain floats — see [`design-notes.md`](design-notes.md). For why results are
 never rounded and how to get a fixed number of decimal places, see
-[`rounding.md`](rounding.md).
+[`rounding.md`](rounding.md). For what the command returns to the shell on
+success and on each kind of failure, see
+[`cli-exit-codes.md`](cli-exit-codes.md).
 
 `unitconv` takes three positional arguments: a numeric value, the unit to
 convert from, and the unit to convert to. It prints the converted value to
