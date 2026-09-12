@@ -370,6 +370,16 @@ def test_convert_length_meters_to_lieues():
         assert convert_length(magnitude, "m", "lieu") == pytest.approx(magnitude / 4444.0)
 
 
+def test_convert_length_pixels_to_meters():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "pxl", "m") == pytest.approx(magnitude * 0.0002645833)
+
+
+def test_convert_length_meters_to_pixels():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "m", "pxl") == pytest.approx(magnitude / 0.0002645833)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
