@@ -62,6 +62,7 @@ FACTORS_LENGTH = {
     "zm": 1e-21,
     "prl": 0.001307,
     "brc": 2.2,
+    "sun": 0.0303,
 }
 
 # Mass base unit: gram.
@@ -132,9 +133,7 @@ def kelvin_to_celsius(value: float) -> float:
 def _lookup(table: dict, unit: str) -> float:
     """Look a unit up in a table, accepting the spelled-out name too."""
     spelled = {
-        "braça (Portuguese fathom)": "brc",
-        "pearl (printing)": "prl",
-        "em (typographic)": "emu",
+        "sun (Japanese)": "sun",
     }
     key = str(unit).strip().lower()
     key = spelled.get(key, str(unit).strip())
