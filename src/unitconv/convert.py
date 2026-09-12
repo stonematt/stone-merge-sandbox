@@ -1,4 +1,5 @@
 """Conversion routines for length, mass, and temperature."""
+import functools
 
 # All factors express "how many base units per 1 of this unit".
 # Length base unit: meter.
@@ -65,6 +66,7 @@ FACTORS_LENGTH = {
     "prl": 0.001307,
     "brc": 2.2,
     "sun": 0.0303,
+    "roe": 3.767,
 }
 
 # Mass base unit: gram.
@@ -132,19 +134,24 @@ def kelvin_to_celsius(value: float) -> float:
     return value - 273.15
 
 
-def _lookup(table: dict, unit: str) -> float:
-    """Look a unit up in a table, accepting the spelled-out name too."""
-    spelled = {
-        "sun (Japanese)": "sun",
+@functools.lru_cache(maxsize=None)
+def _canonical(unit):
+    aliases = {
         "braça (Portuguese fathom)": "brc",
-        "pearl (printing)": "prl",
         "em (typographic)": "emu",
+        "pearl (printing)": "prl",
+        "roede (Dutch rod)": "roe",
+        "sun (Japanese)": "sun",
         "vitasti (indian span)": "vit",
     }
-    key = str(unit).strip().lower()
-    key = spelled.get(key, str(unit).strip())
+    text = str(unit).strip()
+    return aliases.get(text.lower(), text)
+
+
+def _lookup(table: dict, unit: str) -> float:
+    """Look a unit up in a table, accepting the spelled-out name too."""
     try:
-        return table[key]
+        return table[_canonical(unit)]
     except KeyError as exc:
         known = ", ".join(sorted(table))
         raise ValueError(
