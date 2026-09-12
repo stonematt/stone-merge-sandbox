@@ -330,6 +330,16 @@ def test_convert_length_meters_to_twips():
         assert convert_length(magnitude, "m", "twp") == pytest.approx(magnitude / 0.0000176389)
 
 
+def test_convert_length_bu_to_meters():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "jbu", "m") == pytest.approx(magnitude * 0.00303)
+
+
+def test_convert_length_meters_to_bu():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "m", "jbu") == pytest.approx(magnitude / 0.00303)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

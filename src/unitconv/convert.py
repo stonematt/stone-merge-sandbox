@@ -99,6 +99,8 @@ FACTORS_LENGTH = {
     "vshk": 0.04445,
     # Twip (typographic) -- a twentieth of a point, 1/1440 in.
     "twp": 0.0000176389,
+    # Bu (Japanese) -- 1/10 of a sun, 1/100 of a shaku.
+    "jbu": 0.00303,
 }
 
 # Mass base unit: gram.
