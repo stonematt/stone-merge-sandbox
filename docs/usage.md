@@ -24,7 +24,9 @@ do at all — the categories, formats, and flags that are absent — see
 why the knot is not in the table, see
 [`nautical-units.md`](nautical-units.md). For what to do before opening a
 pull request that adds a unit or fixes a factor, see
-[`contributing.md`](contributing.md).
+[`contributing.md`](contributing.md). For how the command is put together —
+the library and CLI layers, how a category is chosen, and why results are
+plain floats — see [`design-notes.md`](design-notes.md).
 
 `unitconv` takes three positional arguments: a numeric value, the unit to
 convert from, and the unit to convert to. It prints the converted value to
