@@ -149,6 +149,17 @@ def test_convert_length_em_typographic_full_name():
         assert convert_length(1, name, "m") == pytest.approx(0.0042333)
 
 
+def test_convert_length_vitasti_to_miles():
+    for magnitude in (0.001, 1.0, 1000.0):
+        miles = convert_length(magnitude, "vit", "mi")
+        assert miles == pytest.approx(magnitude * 0.2286 / 1609.344)
+
+
+def test_convert_length_vitasti_full_name():
+    for name in ("vitasti (Indian span)", "VITASTI (INDIAN SPAN)", "  vitasti (indian span)  "):
+        assert convert_length(1, name, "m") == pytest.approx(0.2286)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
