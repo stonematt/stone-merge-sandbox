@@ -300,6 +300,16 @@ def test_convert_length_meters_to_leguas():
         assert convert_length(magnitude, "m", "lgu") == pytest.approx(magnitude / 4190.0)
 
 
+def test_convert_length_varas_castellanas_to_meters():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "vac", "m") == pytest.approx(magnitude * 0.8382)
+
+
+def test_convert_length_meters_to_varas_castellanas():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "m", "vac") == pytest.approx(magnitude / 0.8382)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
