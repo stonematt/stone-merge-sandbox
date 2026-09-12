@@ -1,4 +1,5 @@
 """Conversion routines for length, mass, and temperature."""
+import re
 import functools
 
 # All factors express "how many base units per 1 of this unit".
@@ -69,6 +70,7 @@ FACTORS_LENGTH = {
     "brc": 2.2,
     "sun": 0.0303,
     "roe": 3.767,
+    "kos": 3218.0,
 }
 
 # Mass base unit: gram.
@@ -136,27 +138,28 @@ def kelvin_to_celsius(value: float) -> float:
     return value - 273.15
 
 
-@functools.lru_cache(maxsize=None)
-def _canonical(unit):
-    aliases = {
-        "braça (Portuguese fathom)": "brc",
-        "em (typographic)": "emu",
-        "pearl (printing)": "prl",
-        "roede (Dutch rod)": "roe",
-        "sun (Japanese)": "sun",
-        "vitasti (indian span)": "vit",
-        "pous (greek foot)": "pous",
-    }
-    text = str(unit).strip()
-    return aliases.get(text.lower(), text)
+_FULL_NAMES = {
+    "braça (Portuguese fathom)": "brc",
+    "em (typographic)": "emu",
+    "kos (Indian)": "kos",
+    "pearl (printing)": "prl",
+    "pous (greek foot)": "pous",
+    "roede (Dutch rod)": "roe",
+    "sun (Japanese)": "sun",
+    "vitasti (indian span)": "vit",
+}
 
 
 def _lookup(table: dict, unit: str) -> float:
     """Look a unit up in a table, accepting the spelled-out name too."""
-    try:
-        return table[_canonical(unit)]
-    except KeyError as exc:
-        known = ", ".join(sorted(table))
-        raise ValueError(
-            f"unsupported unit: {unit!r} (supported: {known})"
-        ) from exc
+    def _normalize(u):
+        return re.sub(r"\s+", " ", str(u).strip().lower())
+
+    text = str(unit).strip()
+    if text in table:
+        return table[text]
+    key = _FULL_NAMES.get(_normalize(text))
+    if key is not None and key in table:
+        return table[key]
+    known = ", ".join(sorted(table))
+    raise ValueError(f"unsupported unit: {unit!r} (supported: {known})")
