@@ -339,6 +339,11 @@ def test_convert_mass_femtogram_to_kg_and_back():
     assert convert_mass(1e-18, "kg", "fg") == pytest.approx(1.0)
 
 
+def test_convert_mass_attogram_to_kg_and_back():
+    assert convert_mass(1, "ag", "kg") == pytest.approx(1e-21)
+    assert convert_mass(1e-21, "kg", "ag") == pytest.approx(1.0)
+
+
 def test_convert_mass_clove_to_kg_and_back():
     assert convert_mass(1, "clv", "kg") == pytest.approx(3.62874)
     assert convert_mass(3.62874, "kg", "clv") == pytest.approx(1.0)

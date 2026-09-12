@@ -120,6 +120,8 @@ FACTORS_MASS = {
     "cwt": 50802.34544,
     # Sack (wool) -- 26 st (364 lb).
     "sck": 165107.62,
+    # Attogram -- a thousandth of a femtogram ("fg").
+    "ag": 1e-18,
 }
 
 # Reserved for the rounding option; nothing reads this yet.
