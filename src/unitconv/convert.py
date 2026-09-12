@@ -87,6 +87,8 @@ FACTORS_LENGTH = {
     "lmin": 17987547480.0,
     # El (Dutch ell) -- "ell" above is the English one (1.143 m).
     "eld": 0.687,
+    # Zettametre -- 1e21 m; the counterpart to the zeptometre "zm" (case-sensitive).
+    "Zm": 1e21,
 }
 
 # Mass base unit: gram.

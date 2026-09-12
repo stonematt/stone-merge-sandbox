@@ -265,6 +265,21 @@ def test_convert_length_dutch_ell_distinct_from_english_ell():
     assert convert_length(1, "ell", "m") == pytest.approx(1.143)
 
 
+def test_convert_length_zettametres_to_meters():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "Zm", "m") == pytest.approx(magnitude * 1e21)
+
+
+def test_convert_length_meters_to_zettametres():
+    for magnitude in (0.001, 1.0, 1000.0):
+        assert convert_length(magnitude, "m", "Zm") == pytest.approx(magnitude / 1e21)
+
+
+def test_convert_length_zettametre_distinct_from_zeptometre():
+    assert convert_length(1, "Zm", "m") == pytest.approx(1e21)
+    assert convert_length(1, "zm", "m") == pytest.approx(1e-21)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")
