@@ -5,6 +5,8 @@ import functools
 # All factors express "how many base units per 1 of this unit".
 # Length base unit: meter.
 FACTORS_LENGTH = {
+    # Cicero (typographic) -- spelled out as "cicero" in _lookup.
+    "cic": 0.004513,
     # Pous (Greek foot) -- spelled out as "pous (Greek foot)" in _lookup.
     "pous": 0.308,
     # Vitasti (Indian span) -- spelled out as "vitasti (Indian span)" in _lookup.
@@ -140,6 +142,7 @@ def kelvin_to_celsius(value: float) -> float:
 
 _FULL_NAMES = {
     "braça (Portuguese fathom)": "brc",
+    "cicero": "cic",
     "em (typographic)": "emu",
     "kos (Indian)": "kos",
     "pearl (printing)": "prl",
