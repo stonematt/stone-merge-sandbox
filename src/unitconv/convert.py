@@ -3,6 +3,8 @@
 # All factors express "how many base units per 1 of this unit".
 # Length base unit: meter.
 FACTORS_LENGTH = {
+    # Pous (Greek foot) -- spelled out as "pous (Greek foot)" in _lookup.
+    "pous": 0.308,
     # Vitasti (Indian span) -- spelled out as "vitasti (Indian span)" in _lookup.
     "vit": 0.2286,
     # Em (typographic) -- spelled out as "em (typographic)" in _lookup.
@@ -140,6 +142,7 @@ def _lookup(table: dict, unit: str) -> float:
         "pearl (printing)": "prl",
         "em (typographic)": "emu",
         "vitasti (indian span)": "vit",
+        "pous (greek foot)": "pous",
     }
     key = str(unit).strip().lower()
     key = spelled.get(key, str(unit).strip())
