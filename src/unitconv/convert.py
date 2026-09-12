@@ -79,6 +79,8 @@ FACTORS_LENGTH = {
     "act": 35.5,
     # Pulgada (Spanish inch) -- spelled out as "pulgada (Spanish inch)" in _lookup.
     "pul": 0.0232,
+    # Fut (Russian foot) -- same length as "ft"; spelled out as "fut (Russian foot)" in _lookup.
+    "fut": 0.3048,
 }
 
 # Mass base unit: gram.
@@ -151,6 +153,7 @@ _FULL_NAMES = {
     "braça (Portuguese fathom)": "brc",
     "cicero": "cic",
     "em (typographic)": "emu",
+    "fut (russian foot)": "fut",
     "hasta (indian cubit)": "hst",
     "kos (Indian)": "kos",
     "pearl (printing)": "prl",
