@@ -24,3 +24,5 @@ All notable changes to this project will be documented in this file.
   conversion category is chosen, and why results are plain floats.
 - Add a rounding behaviour page covering full-precision output, trailing-digit
   artifacts, and how to round at the point of use.
+- Add a CLI exit codes page covering the three codes, which stream carries the
+  message, and why a capitalised unit exits `1`.

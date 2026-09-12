@@ -25,6 +25,9 @@ That distinction is worth keeping: code `1` means the units were the problem
 and a different pair might work, while code `2` means the command line was
 malformed and retrying with other units will not help.
 
+[`cli-exit-codes.md`](cli-exit-codes.md) covers the codes in full, including
+the capitalisation trap that reports a valid unit pair as an exit `1`.
+
 ```bash
 unitconv 3 ft kg
 ```
