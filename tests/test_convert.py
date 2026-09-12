@@ -204,6 +204,17 @@ def test_convert_length_actus_full_name():
         assert convert_length(1, name, "m") == pytest.approx(35.5)
 
 
+def test_convert_length_chi_to_inches():
+    for magnitude in (0.001, 1.0, 1000.0):
+        inches = convert_length(magnitude, "chi", "in")
+        assert inches == pytest.approx(magnitude * 0.333 / 0.0254)
+
+
+def test_convert_length_chi_full_name():
+    for name in ("chi (Chinese foot)", "CHI (CHINESE FOOT)", "  chi (chinese foot)  "):
+        assert convert_length(1, name, "in") == pytest.approx(0.333 / 0.0254)
+
+
 def test_convert_length_unsupported_unit_raises():
     with pytest.raises(ValueError):
         convert_length(1, "m", "parsec")

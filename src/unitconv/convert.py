@@ -77,6 +77,8 @@ FACTORS_LENGTH = {
     "hst": 0.457,
     # Actus (Roman) -- spelled out as "actus (Roman)" in _lookup.
     "act": 35.5,
+    # Chi (Chinese foot) -- spelled out as "chi (Chinese foot)" in _lookup.
+    "chi": 0.333,
 }
 
 # Mass base unit: gram.
@@ -147,6 +149,7 @@ def kelvin_to_celsius(value: float) -> float:
 _FULL_NAMES = {
     "actus (roman)": "act",
     "braça (Portuguese fathom)": "brc",
+    "chi (chinese foot)": "chi",
     "cicero": "cic",
     "em (typographic)": "emu",
     "hasta (indian cubit)": "hst",
