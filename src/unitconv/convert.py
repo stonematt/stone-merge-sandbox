@@ -120,6 +120,8 @@ FACTORS_MASS = {
     "cwt": 50802.34544,
     # Sack (wool) -- 26 st (364 lb).
     "sck": 165107.62,
+    # Troy pound -- 12 ozt; "lb" above is the avoirdupois (16 oz) one.
+    "lbt": 373.2417216,
 }
 
 # Reserved for the rounding option; nothing reads this yet.

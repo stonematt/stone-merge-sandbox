@@ -379,8 +379,17 @@ def test_convert_mass_sack_wool_to_kg_and_back():
     assert convert_mass(165.10762, "kg", "sck") == pytest.approx(1.0)
 
 
+def test_convert_mass_troy_pound_to_kg_and_back():
+    assert convert_mass(1, "lbt", "kg") == pytest.approx(0.3732417216)
+    assert convert_mass(0.3732417216, "kg", "lbt") == pytest.approx(1.0)
+
+
 def test_convert_mass_stone_to_lb():
     assert convert_mass(1, "st", "lb") == pytest.approx(14.0)
+
+
+def test_convert_mass_troy_pound_to_troy_ounce():
+    assert convert_mass(1, "lbt", "ozt") == pytest.approx(12.0)
 
 
 def test_celsius_to_fahrenheit():
