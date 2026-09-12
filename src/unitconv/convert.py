@@ -83,6 +83,8 @@ FACTORS_LENGTH = {
     "fut": 0.3048,
     # Voet (Dutch foot) -- distinct from the Dutch rod "roe" above.
     "voe": 0.2831,
+    # Light-minute -- exactly 60 s of light in vacuum (299792458 m/s).
+    "lmin": 17987547480.0,
 }
 
 # Mass base unit: gram.
