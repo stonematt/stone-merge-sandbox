@@ -120,6 +120,8 @@ FACTORS_MASS = {
     "cwt": 50802.34544,
     # Sack (wool) -- 26 st (364 lb).
     "sck": 165107.62,
+    # Momme (Japanese) -- 10 fun; "kan" above is 1000 momme.
+    "mom": 3.75,
 }
 
 # Reserved for the rounding option; nothing reads this yet.
